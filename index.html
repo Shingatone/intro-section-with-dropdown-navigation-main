@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Section with dropdown</title>
+  </head>
+  <body class="w-full h-screen px-8 py-4 bg-slate-300">
+    <header class="flex mb-6">
+      <div class="flex">
+        <div class="mr-10">
+          <img src="./images/logo.svg" alt="Logo" />
+        </div>
+        <nav>
+          <ul class="flex gap-8 font-semibold text-stone-950">
+            <li>
+              <div class="main-wrapper group">
+                <a href="#" class="flex items-center gap-2">
+                  Feature
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    alt=""
+                    class="group-hover:hidden"
+                  />
+                  <img
+                    src="./images/icon-arrow-up.svg"
+                    alt=""
+                    class="hidden group-hover:block"
+                  />
+                </a>
+                <ul
+                  class="dropdown-menu text-gray-700 pt-1 w-full shadow-md hidden group-hover:block"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center gap-2 unded-t bg-gray-200 hover:bg-gray-300 px-4 py-2 block whitespace-no-wrap"
+                    >
+                      <img src="./images/icon-todo.svg" alt="" />
+                      Todo List
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center gap-2 unded-t bg-gray-200 hover:bg-gray-300 px-4 py-2 block whitespace-no-wrap"
+                    >
+                      <img src="./images/icon-calendar.svg" alt="" />
+                      Calendar
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center gap-2 unded-t bg-gray-200 hover:bg-gray-300 px-4 py-2 block whitespace-no-wrap"
+                    >
+                      <img src="./images/icon-reminders.svg" alt="" />
+                      Reminders
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center gap-2 unded-t bg-gray-200 hover:bg-gray-300 px-4 py-2 block whitespace-no-wrap"
+                    >
+                      <img src="./images/icon-planning.svg" alt="" />
+                      Planning
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="main-wrapper group rounded-md">
+                <a href="#" class="flex items-center gap-2">
+                  Company
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    alt=""
+                    class="group-hover:hidden"
+                  />
+                  <img
+                    src="./images/icon-arrow-up.svg"
+                    alt=""
+                    class="hidden group-hover:block"
+                  />
+                </a>
+                <ul
+                  class="dropdown-menu text-gray-700 pt-2 w-full shadow-md hidden group-hover:block"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center gap-2 unded-t bg-gray-200 hover:bg-gray-300 px-4 py-2 block whitespace-no-wrap"
+                    >
+                      History
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center gap-2 unded-t bg-gray-200 hover:bg-gray-300 px-4 py-2 block whitespace-no-wrap"
+                    >
+                      Our Team
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center gap-2 unded-t bg-gray-200 hover:bg-gray-300 px-4 py-2 block whitespace-no-wrap"
+                    >
+                      Blog
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- <a href="#" class="flex items-center gap-2">
+                Company
+                <img src="./images/icon-arrow-down.svg" alt="" />
+              </a> -->
+            </li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="ml-auto flex gap-8">
+        <a href="#">Login</a>
+        <button class="border rounded-lg px-3 py-1">Register</button>
+      </div>
+    </header>
+    <main class="flex with-full max-h-auto px-44">
+      <div class="w-1/2 pt-20">
+        <h1 class="text-[4rem] font-[Heebo] font-bold leading-none">
+          Make <br />
+          remote work
+        </h1>
+        <p class="text-sm text-gray-600 mt-10 mb-10">
+          Get your team in sync, no matter your location <br />
+          Streamline processes, create team rituals, and <br />
+          watch productivity soar.
+        </p>
+        <button class="bg-slate-950 text-white px-4 py-1 rounded-lg">
+          Learn more
+        </button>
+        <div class="flex items-center gap-4 mt-16 w-11/12">
+          <img class="w-1/6" src="./images/client-databiz.svg" alt="" />
+          <img class="w-1/6" src="./images/client-audiophile.svg" alt="" />
+          <img class="w-1/6" src="./images/client-meet.svg" alt="" />
+          <img class="w-1/6" src="./images/client-maker.svg" alt="" />
+        </div>
+      </div>
+
+      <div class="w-1/2 flex justify-center items-center">
+        <img src="./images/image-hero-desktop.png" alt="" class="w-3/4" />
+      </div>
+    </main>
+  </body>
+</html>

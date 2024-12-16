@@ -10,147 +10,154 @@
       href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              Epilogue: ["Epilogue", "sans-serif"],
+            },
+            colors: {
+              AlmostWhite: "hsl(0, 0%, 98%)",
+              MediumGray: "hsl(0, 0%, 41%)",
+              AlmostBlack: "hsl(0, 0%, 8%)",
+            },
+          },
+        },
+      };
+    </script>
     <title>Section with dropdown</title>
   </head>
-  <body class="w-full h-screen px-8 py-4 bg-slate-300">
-    <header class="flex mb-6">
-      <div class="flex">
-        <div class="mr-10">
+  <body class="font-Epilogue w-full h-screen px-8 py-4 bg-AlmostWhite">
+    <!-- Section header -->
+    <header class="flex mb-8">
+      <!-- section de gauche header -->
+      <div class="flex gap-14">
+        <div class="">
           <img src="./images/logo.svg" alt="Logo" />
         </div>
-        <nav>
-          <ul class="flex gap-8 font-semibold text-stone-950">
-            <li>
-              <div class="main-wrapper group">
-                <a href="#" class="flex items-center gap-2">
-                  Feature
-                  <img
-                    src="./images/icon-arrow-down.svg"
-                    alt=""
-                    class="group-hover:hidden"
-                  />
-                  <img
-                    src="./images/icon-arrow-up.svg"
-                    alt=""
-                    class="hidden group-hover:block"
-                  />
-                </a>
-                <ul
-                  class="dropdown-menu text-gray-700 pt-1 w-full shadow-md hidden group-hover:block"
-                >
-                  <li>
-                    <a
-                      href="#"
-                      class="flex items-center gap-2 unded-t bg-gray-200 hover:bg-gray-300 px-4 py-2 block whitespace-no-wrap"
-                    >
-                      <img src="./images/icon-todo.svg" alt="" />
-                      Todo List
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="flex items-center gap-2 unded-t bg-gray-200 hover:bg-gray-300 px-4 py-2 block whitespace-no-wrap"
-                    >
-                      <img src="./images/icon-calendar.svg" alt="" />
-                      Calendar
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="flex items-center gap-2 unded-t bg-gray-200 hover:bg-gray-300 px-4 py-2 block whitespace-no-wrap"
-                    >
-                      <img src="./images/icon-reminders.svg" alt="" />
-                      Reminders
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="flex items-center gap-2 unded-t bg-gray-200 hover:bg-gray-300 px-4 py-2 block whitespace-no-wrap"
-                    >
-                      <img src="./images/icon-planning.svg" alt="" />
-                      Planning
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <div class="main-wrapper group rounded-md">
-                <a href="#" class="flex items-center gap-2">
-                  Company
-                  <img
-                    src="./images/icon-arrow-down.svg"
-                    alt=""
-                    class="group-hover:hidden"
-                  />
-                  <img
-                    src="./images/icon-arrow-up.svg"
-                    alt=""
-                    class="hidden group-hover:block"
-                  />
-                </a>
-                <ul
-                  class="dropdown-menu text-gray-700 pt-2 w-full shadow-md hidden group-hover:block"
-                >
-                  <li>
-                    <a
-                      href="#"
-                      class="flex items-center gap-2 unded-t bg-gray-200 hover:bg-gray-300 px-4 py-2 block whitespace-no-wrap"
-                    >
-                      History
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="flex items-center gap-2 unded-t bg-gray-200 hover:bg-gray-300 px-4 py-2 block whitespace-no-wrap"
-                    >
-                      Our Team
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="flex items-center gap-2 unded-t bg-gray-200 hover:bg-gray-300 px-4 py-2 block whitespace-no-wrap"
-                    >
-                      Blog
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- <a href="#" class="flex items-center gap-2">
-                Company
-                <img src="./images/icon-arrow-down.svg" alt="" />
-              </a> -->
-            </li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">About</a></li>
-          </ul>
+        <nav class="flex font-semibold text-gray-500 gap-8 text-sm">
+          <!-- Feature dropdown -->
+          <div class="relative w-auto text-right group">
+            <button
+              class="flex items-center gap-1 text-right hover:text-gray-700"
+            >
+              Feature
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt=""
+                class="group-hover:hidden"
+              />
+              <img
+                src="./images/icon-arrow-up.svg"
+                alt=""
+                class="hidden group-hover:block"
+              />
+            </button>
+            <div
+              class="absolute right-0 w-32 mt-3 bg-gray-100 shadow-md rounded-md px-3 py-2 text-xs text-left hidden group-hover:block"
+            >
+              <a
+                href="#"
+                class="block flex items-center gap-2 whitespace-nowrap hover:bg-gray-200 hover:text-gray-700 px-2 py-1"
+              >
+                <img src="./images/icon-todo.svg" alt="" />
+                Todo List
+              </a>
+              <a
+                href="#"
+                class="block flex items-center gap-2 whitespace-nowrap hover:bg-gray-200 hover:text-gray-700 px-2 py-1"
+              >
+                <img src="./images/icon-calendar.svg" alt="" />
+                Calendar
+              </a>
+              <a
+                href="#"
+                class="block flex items-center gap-2 whitespace-nowrap hover:bg-gray-200 hover:text-gray-700 px-2 py-1"
+              >
+                <img src="./images/icon-reminders.svg" alt="" />
+                Reminders
+              </a>
+              <a
+                href="#"
+                class="block flex items-center gap-2 whitespace-nowrap hover:bg-gray-200 hover:text-gray-700 px-2 py-1"
+              >
+                <img src="./images/icon-planning.svg" alt="" />
+                Planning
+              </a>
+            </div>
+          </div>
+
+          <div class="relative w-auto text-left group">
+            <button class="flex items-center gap-1 hover:text-gray-700">
+              Company
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt=""
+                class="group-hover:hidden"
+              />
+              <img
+                src="./images/icon-arrow-up.svg"
+                alt=""
+                class="hidden group-hover:block"
+              />
+            </button>
+            <div
+              class="absolute left-0 w-28 mt-3 bg-gray-100 shadow-md rounded-md py-3 px-2 text-left text-xs hidden group-hover:block"
+            >
+              <a
+                href="#"
+                class="block flex items-center gap-2 whitespace-nowrap hover:bg-gray-200 px-2 py-1 hover:text-gray-700"
+              >
+                History
+              </a>
+              <a
+                href="#"
+                class="block flex items-center gap-2 whitespace-nowrap hover:bg-gray-200 px-2 py-1 hover:text-gray-700"
+              >
+                Our Team
+              </a>
+              <a
+                href="#"
+                class="block flex items-center gap-2 whitespace-nowrap hover:bg-gray-200 px-2 py-1 hover:text-gray-700"
+              >
+                Blog
+              </a>
+            </div>
+          </div>
+
+          <a href="#" class="hover:text-gray-700">Careers</a>
+          <a href="#" class="hover:text-gray-700">About</a>
         </nav>
       </div>
-      <div class="ml-auto flex gap-8">
-        <a href="#">Login</a>
-        <button class="border rounded-lg px-3 py-1">Register</button>
+      <div
+        class="ml-auto flex items-center gap-8 font-semibold text-sm text-gray-500"
+      >
+        <a href="#" class="hover:text-gray-700">Login</a>
+        <button
+          class="border-2 border-gray-500 rounded-lg px-3 py-1 hover:text-gray-700 hover:border-gray-700"
+        >
+          Register
+        </button>
       </div>
     </header>
-    <main class="flex with-full max-h-auto px-44">
-      <div class="w-1/2 pt-20">
+    <main class="flex w-full max-h-auto px-32">
+      <div class="w-3/5 pt-20">
         <h1 class="text-[4rem] font-[Heebo] font-bold leading-none">
           Make <br />
           remote work
         </h1>
-        <p class="text-sm text-gray-600 mt-10 mb-10">
+        <p class="text-[14 px] font-semibold text-gray-400 mt-8 mb-8">
           Get your team in sync, no matter your location <br />
           Streamline processes, create team rituals, and <br />
           watch productivity soar.
         </p>
-        <button class="bg-slate-950 text-white px-4 py-1 rounded-lg">
+        <button
+          class="bg-slate-950 text-white font-semibold px-4 py-2 border-2 rounded-lg hover:bg-transparent hover:text-black hover:border-2 hover:border-gray-700"
+        >
           Learn more
         </button>
-        <div class="flex items-center gap-4 mt-16 w-11/12">
+        <div class="flex items-center gap-4 mt-12 w-11/12">
           <img class="w-1/6" src="./images/client-databiz.svg" alt="" />
           <img class="w-1/6" src="./images/client-audiophile.svg" alt="" />
           <img class="w-1/6" src="./images/client-meet.svg" alt="" />
@@ -158,8 +165,12 @@
         </div>
       </div>
 
-      <div class="w-1/2 flex justify-center items-center">
-        <img src="./images/image-hero-desktop.png" alt="" class="w-3/4" />
+      <div class="relative w-2/5 flex justify-center items-center">
+        <img
+          src="./images/image-hero-desktop.png"
+          alt=""
+          class="absolute cover"
+        />
       </div>
     </main>
   </body>
